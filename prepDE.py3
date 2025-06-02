@@ -63,13 +63,13 @@ if len(samples) == 0:
   print("Error: no GTF files found under base directory %s !" % (opts.input))
   sys.exit(1)
 
-RE_GENE_ID=re.compile('gene_id "([^"]+)"')
-RE_GENE_NAME=re.compile('gene_name "([^"]+)"')
-RE_TRANSCRIPT_ID=re.compile('transcript_id "([^"]+)"')
-RE_COVERAGE=re.compile('cov "([\-\+\d\.]+)"')
+RE_GENE_ID=re.compile(r'gene_id "([^"]+)"')
+RE_GENE_NAME=re.compile(r'gene_name "([^"]+)"')
+RE_TRANSCRIPT_ID=re.compile(r'transcript_id "([^"]+)"')
+RE_COVERAGE=re.compile(r'cov "([\-\+\d\.]+)"')
 RE_STRING=re.compile(re.escape(opts.string))
 
-RE_GFILE=re.compile('\-G\s*(\S+)') #assume filepath without spaces..
+RE_GFILE=re.compile(r'\-G\s*(\S+)') #assume filepath without spaces..
 
 
 #####
